@@ -1,19 +1,19 @@
 <!doctype html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="eveCommentsApp" ng-controller="PhoneListCtrl">
     <head>
         <meta charset="utf-8">
         <title>EVE Comments</title>
 
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-
-        
-
         <link rel="stylesheet" href="css/ec_main.css">
 
         <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="js/controllers/phones.js"></script>
+        <script src="js/evecomments.js"></script>
     </head>
 
     <body>
-        <p>Nothing here {{'yet' + '!'}}</p>
+        <div ng-view></div>
     </body>
 </html>
