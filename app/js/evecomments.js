@@ -3,21 +3,21 @@
 
 var eveCommentsApp = angular.module('eveCommentsApp', [
     'ngRoute',
-    'phonecatControllers'
+    'HomeControllers',
+    'CommentControllers'
 ]);
 
-eveCommentsApp.config(['$routeProvider',
-    function($routeProvider) {
-        $routeProvider.
-        when('/phones', {
-            templateUrl: 'partials/phone-list.html',
-            controller: 'PhoneListCtrl'
+eveCommentsApp.config(['$routeProvider', function($routeProvider) {
+    $routeProvider.
+        when('/', {
+            templateUrl: 'partials/home.html',
+            controller: 'HomeController'
         }).
-        when('/phones/:phoneId', {
-            templateUrl: 'partials/phone-details.html',
-            controller: 'PhoneDetailCtrl'
+        when('/comments/:siteID', {
+            templateUrl: 'partials/comments.html',
+            controller: 'CommentsController'
         }).
         otherwise({
-            redirectTo: '/phones'
+            redirectTo: '/'
         });
-    }]);
+}]);
