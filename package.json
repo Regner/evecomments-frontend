@@ -3,7 +3,6 @@
   "description": "Frontend for the EVE Comments application.",
   "version": "0.0.0",
   "repository": "https://github.com/regner/evecomments-frontend",
-  "license": "MIT",
   "private": true,
   "devDependencies": {
     "http-server": "^0.6.1",
