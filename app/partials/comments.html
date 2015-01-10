@@ -1,11 +1,11 @@
 <div class="row">
     <div class="row comment-row" ng-repeat="comment in comments">
         <div class="pull-left">
-            <img nrg-src="{{ comment.author_image_links[64] }}" class="img-rounded" />
+            <img ng-src="{{ comment.author_image_links[64] }}" class="img-rounded" />
         </div>
         <div class="comment-content">
             <div class="comment-header">
-                {{ comment.author.name }} | {{ comment.created_on }}
+                {{ comment.author_name }} | {{ comment.created_on }}
             </div>
             <div class="comment-body">
                 <pre>{{ comment.message }}</pre>
