@@ -1,14 +1,15 @@
 (function () {
     'use strict';
 
-    function EVEComments(Restangular) {
+    function backendService($resource) {
+        var service = {}
 
-        var test = Restangular.allUrl('comments', 'http://127.0.0.1:5000/api/comments/1/').getList();
+        service.commentsv1 = $resource('http://localhost/api/v1/comments/1');
 
-        return test
+        return service
     }
 
     angular.
-        module('EVECommentsService', []).
-        factory('EVEComments', ['Restangular', EVEComments]);
+        module('BackendServices', []).
+        factory('backendService', ['$resource', backendService]);
 }());

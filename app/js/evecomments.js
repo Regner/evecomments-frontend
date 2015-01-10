@@ -3,10 +3,10 @@
 
 var eveCommentsApp = angular.module('eveCommentsApp', [
     'ngRoute',
+    'ngResource',
     'HomeControllers',
     'CommentControllers',
-    'EVECommentsService',
-    'restangular'
+    'BackendServices'
 ]);
 
 eveCommentsApp.config(['$routeProvider', function($routeProvider) {
