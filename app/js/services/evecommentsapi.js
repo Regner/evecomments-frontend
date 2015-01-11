@@ -4,7 +4,7 @@
     function backendService($resource) {
         var service = {}
 
-        service.commentsv1 = $resource('http://localhost/api/v1/comments/1');
+        service.commentsv1 = $resource('/api/v1/comments/1');
 
         return service
     }
