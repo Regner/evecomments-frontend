@@ -2,8 +2,8 @@
     'use strict';
 
     function CommentsController($scope, backendService) {
-        var comments = backendService.commentsv1.query(function() {
-            $scope.comments = comments
+        backendService.commentsv1.query(function(data) {
+            $scope.comments = data;
         });
     }
 
